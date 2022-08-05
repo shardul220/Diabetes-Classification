@@ -26,8 +26,8 @@ def predict():
     Insulin = float(request.form['insulin'])
     BMI = float(request.form['bmi'])
     
-    data = np.array([[Pregnancies, Glucose, 
-                      BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+    data = np.array([[Pregnancies, DiabetesPedigreeFunction, Age, Glucose, 
+                      BloodPressure, SkinThickness, Insulin, BMI]])
     
     prediction = model.predict(data)
 
