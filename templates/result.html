@@ -21,10 +21,10 @@
 
 		<!-- Result -->
 		<div class="results">
-			{% if prediction==0 %}
+			{% if prediction==1 %}
 				<h1>Prediction: <span class='danger'>Bad News! It seems you have Diabetes</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='have_diabetes.webp') }}" alt="Diabetes Image">
-			{% elif prediction==1 %}
+			{% elif prediction==0 %}
 				<h1>Prediction: <span class='safe'>Great News! It seems you are healthy and Diabetes free</span></h1>
 				<img class="gif1" src="{{ url_for('static', filename='do_not_have_diabetes.webp') }}" alt="Not Diabetes Image">
 			{% endif %}
